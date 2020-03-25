@@ -3,6 +3,7 @@ from django import forms
 
 class CommandForm(forms.Form):
     token = forms.CharField()
+    text = forms.CharField(required=False)
     team_id = forms.CharField(required=False)
     team_domain = forms.CharField(required=False)
     enterprise_id = forms.CharField(required=False)
@@ -12,6 +13,5 @@ class CommandForm(forms.Form):
     user_id = forms.CharField()
     user_name = forms.CharField()
     command = forms.CharField()
-    text = forms.CharField()
     response_url = forms.URLField()
     trigger_id = forms.CharField()
